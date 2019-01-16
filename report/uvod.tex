@@ -1,0 +1,62 @@
+\section{Uvod}
+U ovom radu je na DE1-SoC razvojnom sistemu implementiran jednostavan hardver u FPGA, portovan je Linuks operativni sistem i napisan je drajver za pristup registrima i prihvatanje prekida iz FPGA.
+
+\subsection{Sistemi na čipu sa FPGA}
+Sa sve većim mogućnostima namenskih sistema došlo je do popularizacije sistema na čipovima (SoC - \textit{System on Chip}) koji integrišu mikroprocesore sa više jezgara, memorije na čipu, mnogobrojne periferije i transivere, kao i FPGA (\textit{Field Programmable Gate Array}).
+
+\subsection{Opis DE1-SoC}
+
+
+U nastavku su navedene samo osobine razvojnog sistema koje se tiču ovog rada, a detaljniji opis se moze pronaći u dokumentu zvaničnoj dokumentaciji proizvođača \cite{de1}: 
+\begin{itemize}
+\item Sistem na čipu Cyclone V \texttt{5CSEMA5F31}
+\item Memorija 1GB (2x256Mx16) DDR3 SDRAM povezana na HPS
+\item Slot za Micro SD karticu povezan na HPS
+\item UART na USB (USB Mini-B konektor)
+\item 5 debaunsiranih tastera (FPGA x4, HPS x1)
+\item 11 LE dioda (FPGA x10, HPS x 1)
+\item 12V DC napajanje
+\end{itemize}
+
+\subsection{Opis Altera Cyclone V}
+Altera Cyclone V je SoC FPGA koji se sastoji od dva dela: procesorski deo (HPS -  \textit{Hard processor System}) i programabilni FGPA deo. HPS se sastoji od MPU (\textit{Microprocessor unit}) sa ARM Cortex-A9 MPCore sa dva jezgra i sledećih modula: kontroleri memorije, memorije, periferije, sistem interkonekcije, debug moduli, PLL moduli. FPGA deo se sastoji od sledećih delova: FPGA programabilna logika (\textit{look-up} tabele, RAM memorije, mnozači i rutiranje), kontrolni blok, PLL, kontroler memorije.
+
+\subsubsection{Konfigurisanje FPGA i pokretanje HPS}
+Pri pokretanju HPS (\textit{boot}) može da učita program iz FPGA dela, iz eksterne \textit{flash} memorije ili preko JTAG. FPGA ima mogućnost da se konfiguriše softverski iz HPS korišćenjem periferije \textit{FPGA Manager} ili spoljnim programatorom. Kombinacije ovih mogućnosti daju nekoliko scenarija:
+
+Pokretanje HPS je proces koji se obavlja u više koraka. Nakon izvršavanja svakog koraka se učitava i pokreće sledeći. Ovo je proces je sličan kod svih ARM procesora, a u nastavku je ukratko opisan za konkretnu platformu. Grafički prikaz procesa je na slici \ref{slika1:bootr}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1.]{img/gsrd-boot.png}
+\caption{Tok pokretana sistema}
+\label{slika1:bootr}
+\end{figure}
+
+U nastavku su objašnjeni fajlovi koji se koriste pri projektovanju:
+\begin{itemize}
+\item \texttt{.qpf} - projektni fajl za Quartus. Ovaj fajl generiše DE1-SoC Builder
+\item \texttt{.qsf} - skripta za podešavanje pinova. Ovaj fajl generiše DE1-SoC Builder
+\end{itemize} 
+\pagebreak
+\begin{lstlisting}[language=C]
+/ {
+	#address-cells = <1>;
+	#size-cells = <1>;
+	
+	cpus {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		cpu0: cpu@0 {
+			compatible = "arm,cortex-a9";
+			device_type = "cpu";
+			reg = <0>;
+		};
+		cpu1: cpu@1 {
+			compatible = "arm,cortex-a9";
+			device_type = "cpu";
+			reg = <1>;
+		};
+	};
+\end{lstlisting}
