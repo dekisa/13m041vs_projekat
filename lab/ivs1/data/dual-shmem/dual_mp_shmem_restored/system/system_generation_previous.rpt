@@ -1,0 +1,196 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/strahinja/data/faks/vezbe/IVS/vezbe/v1/code/dual_mp_shmem/system.qsys --block-symbol-file --output-directory=/home/strahinja/data/faks/vezbe/IVS/vezbe/v1/code/dual_mp_shmem/system --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading dual_mp_shmem/system.qsys
+Progress: Reading input file
+Progress: Adding clk_50MHz [clock_source 17.0]
+Progress: Parameterizing module clk_50MHz
+Progress: Adding cpu0 [altera_nios2_gen2 17.0]
+Progress: Parameterizing module cpu0
+Progress: Adding cpu0_jtag_uart [altera_avalon_jtag_uart 17.0]
+Progress: Parameterizing module cpu0_jtag_uart
+Progress: Adding cpu0_ocm [altera_avalon_onchip_memory2 17.0]
+Progress: Parameterizing module cpu0_ocm
+Progress: Adding cpu1 [altera_nios2_gen2 17.0]
+Progress: Parameterizing module cpu1
+Progress: Adding cpu1_jtag_uart [altera_avalon_jtag_uart 17.0]
+Progress: Parameterizing module cpu1_jtag_uart
+Progress: Adding cpu1_ocm [altera_avalon_onchip_memory2 17.0]
+Progress: Parameterizing module cpu1_ocm
+Progress: Adding datagen [data_gen 1.1]
+Progress: Parameterizing module datagen
+Progress: Adding mutex [altera_avalon_mutex 17.0]
+Progress: Parameterizing module mutex
+Progress: Adding pll_0 [altera_pll 17.0]
+Progress: Parameterizing module pll_0
+Progress: Adding shared_mem [altera_avalon_onchip_memory2 17.0]
+Progress: Parameterizing module shared_mem
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: system.cpu0_jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: system.cpu1_jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: system.mutex: The initial owner must release the mutex before it can be acquired by another owner. Nios II processors use their cpuid register value for the owner field. SOPC Builder assigns cpuid values to each Nios II core, starting from 0x0000, and incrementing in the order that the Nios II components appear on the System Contents tab.
+Info: system.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: system.pll_0: Able to implement PLL with user settings
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/strahinja/data/faks/vezbe/IVS/vezbe/v1/code/dual_mp_shmem/system.qsys --synthesis=VHDL --output-directory=/home/strahinja/data/faks/vezbe/IVS/vezbe/v1/code/dual_mp_shmem/system/synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading dual_mp_shmem/system.qsys
+Progress: Reading input file
+Progress: Adding clk_50MHz [clock_source 17.0]
+Progress: Parameterizing module clk_50MHz
+Progress: Adding cpu0 [altera_nios2_gen2 17.0]
+Progress: Parameterizing module cpu0
+Progress: Adding cpu0_jtag_uart [altera_avalon_jtag_uart 17.0]
+Progress: Parameterizing module cpu0_jtag_uart
+Progress: Adding cpu0_ocm [altera_avalon_onchip_memory2 17.0]
+Progress: Parameterizing module cpu0_ocm
+Progress: Adding cpu1 [altera_nios2_gen2 17.0]
+Progress: Parameterizing module cpu1
+Progress: Adding cpu1_jtag_uart [altera_avalon_jtag_uart 17.0]
+Progress: Parameterizing module cpu1_jtag_uart
+Progress: Adding cpu1_ocm [altera_avalon_onchip_memory2 17.0]
+Progress: Parameterizing module cpu1_ocm
+Progress: Adding datagen [data_gen 1.1]
+Progress: Parameterizing module datagen
+Progress: Adding mutex [altera_avalon_mutex 17.0]
+Progress: Parameterizing module mutex
+Progress: Adding pll_0 [altera_pll 17.0]
+Progress: Parameterizing module pll_0
+Progress: Adding shared_mem [altera_avalon_onchip_memory2 17.0]
+Progress: Parameterizing module shared_mem
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: system.cpu0_jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: system.cpu1_jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: system.mutex: The initial owner must release the mutex before it can be acquired by another owner. Nios II processors use their cpuid register value for the owner field. SOPC Builder assigns cpuid values to each Nios II core, starting from 0x0000, and incrementing in the order that the Nios II components appear on the System Contents tab.
+Info: system.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: system.pll_0: Able to implement PLL with user settings
+Info: system: Generating system "system" for QUARTUS_SYNTH
+Info: cpu0: "system" instantiated altera_nios2_gen2 "cpu0"
+Info: cpu0_jtag_uart: Starting RTL generation for module 'system_cpu0_jtag_uart'
+Info: cpu0_jtag_uart:   Generation command is [exec /home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=system_cpu0_jtag_uart --dir=/tmp/alt7480_9062133702958248901.dir/0002_cpu0_jtag_uart_gen/ --quartus_dir=/home/strahinja/tools/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7480_9062133702958248901.dir/0002_cpu0_jtag_uart_gen//system_cpu0_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: cpu0_jtag_uart: Done RTL generation for module 'system_cpu0_jtag_uart'
+Info: cpu0_jtag_uart: "system" instantiated altera_avalon_jtag_uart "cpu0_jtag_uart"
+Info: cpu0_ocm: Starting RTL generation for module 'system_cpu0_ocm'
+Info: cpu0_ocm:   Generation command is [exec /home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_cpu0_ocm --dir=/tmp/alt7480_9062133702958248901.dir/0003_cpu0_ocm_gen/ --quartus_dir=/home/strahinja/tools/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7480_9062133702958248901.dir/0003_cpu0_ocm_gen//system_cpu0_ocm_component_configuration.pl  --do_build_sim=0  ]
+Info: cpu0_ocm: Done RTL generation for module 'system_cpu0_ocm'
+Info: cpu0_ocm: "system" instantiated altera_avalon_onchip_memory2 "cpu0_ocm"
+Info: cpu1: "system" instantiated altera_nios2_gen2 "cpu1"
+Info: cpu1_ocm: Starting RTL generation for module 'system_cpu1_ocm'
+Info: cpu1_ocm:   Generation command is [exec /home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_cpu1_ocm --dir=/tmp/alt7480_9062133702958248901.dir/0004_cpu1_ocm_gen/ --quartus_dir=/home/strahinja/tools/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7480_9062133702958248901.dir/0004_cpu1_ocm_gen//system_cpu1_ocm_component_configuration.pl  --do_build_sim=0  ]
+Info: cpu1_ocm: Done RTL generation for module 'system_cpu1_ocm'
+Info: cpu1_ocm: "system" instantiated altera_avalon_onchip_memory2 "cpu1_ocm"
+Info: datagen: "system" instantiated data_gen "datagen"
+Info: mutex: Starting RTL generation for module 'system_mutex'
+Info: mutex:   Generation command is [exec /home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_mutex -- /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_mutex/generate_rtl.pl --name=system_mutex --dir=/tmp/alt7480_9062133702958248901.dir/0006_mutex_gen/ --quartus_dir=/home/strahinja/tools/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7480_9062133702958248901.dir/0006_mutex_gen//system_mutex_component_configuration.pl  --do_build_sim=0  ]
+Info: mutex: Done RTL generation for module 'system_mutex'
+Info: mutex: "system" instantiated altera_avalon_mutex "mutex"
+Info: pll_0: "system" instantiated altera_pll "pll_0"
+Info: shared_mem: Starting RTL generation for module 'system_shared_mem'
+Info: shared_mem:   Generation command is [exec /home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_shared_mem --dir=/tmp/alt7480_9062133702958248901.dir/0008_shared_mem_gen/ --quartus_dir=/home/strahinja/tools/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7480_9062133702958248901.dir/0008_shared_mem_gen//system_shared_mem_component_configuration.pl  --do_build_sim=0  ]
+Info: shared_mem: Done RTL generation for module 'system_shared_mem'
+Info: shared_mem: "system" instantiated altera_avalon_onchip_memory2 "shared_mem"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "system" instantiated altera_irq_mapper "irq_mapper"
+Info: irq_mapper_001: "system" instantiated altera_irq_mapper "irq_mapper_001"
+Info: rst_controller: "system" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'system_cpu0_cpu'
+Info: cpu:   Generation command is [exec /home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64//eperlcmd -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64//perl/lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=system_cpu0_cpu --dir=/tmp/alt7480_9062133702958248901.dir/0012_cpu_gen/ --quartus_bindir=/home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64/ --verilog --config=/tmp/alt7480_9062133702958248901.dir/0012_cpu_gen//system_cpu0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2017.11.10 02:22:12 (*) Starting Nios II generation
+Info: cpu: # 2017.11.10 02:22:12 (*)   Checking for plaintext license.
+Info: cpu: # 2017.11.10 02:22:13 (*)   Plaintext license not found.
+Info: cpu: # 2017.11.10 02:22:13 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2017.11.10 02:22:13 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: cpu: # 2017.11.10 02:22:13 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2017.11.10 02:22:13 (*)   Creating all objects for CPU
+Info: cpu: # 2017.11.10 02:22:13 (*)     Testbench
+Info: cpu: # 2017.11.10 02:22:14 (*)     Instruction decoding
+Info: cpu: # 2017.11.10 02:22:14 (*)       Instruction fields
+Info: cpu: # 2017.11.10 02:22:14 (*)       Instruction decodes
+Info: cpu: # 2017.11.10 02:22:14 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2017.11.10 02:22:15 (*)       Instruction controls
+Info: cpu: # 2017.11.10 02:22:15 (*)     Pipeline frontend
+Info: cpu: # 2017.11.10 02:22:15 (*)     Pipeline backend
+Info: cpu: # 2017.11.10 02:22:18 (*)   Generating RTL from CPU objects
+Info: cpu: # 2017.11.10 02:22:20 (*)   Creating encrypted RTL
+Info: cpu: # 2017.11.10 02:22:21 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'system_cpu0_cpu'
+Info: cpu: "cpu0" instantiated altera_nios2_gen2_unit "cpu"
+Info: cpu: Starting RTL generation for module 'system_cpu1_cpu'
+Info: cpu:   Generation command is [exec /home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64//eperlcmd -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64//perl/lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/strahinja/tools/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=system_cpu1_cpu --dir=/tmp/alt7480_9062133702958248901.dir/0013_cpu_gen/ --quartus_bindir=/home/strahinja/tools/intelFPGA_lite/17.0/quartus/linux64/ --verilog --config=/tmp/alt7480_9062133702958248901.dir/0013_cpu_gen//system_cpu1_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2017.11.10 02:22:22 (*) Starting Nios II generation
+Info: cpu: # 2017.11.10 02:22:22 (*)   Checking for plaintext license.
+Info: cpu: # 2017.11.10 02:22:22 (*)   Plaintext license not found.
+Info: cpu: # 2017.11.10 02:22:22 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2017.11.10 02:22:23 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: cpu: # 2017.11.10 02:22:23 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2017.11.10 02:22:23 (*)   Creating all objects for CPU
+Info: cpu: # 2017.11.10 02:22:23 (*)     Testbench
+Info: cpu: # 2017.11.10 02:22:23 (*)     Instruction decoding
+Info: cpu: # 2017.11.10 02:22:23 (*)       Instruction fields
+Info: cpu: # 2017.11.10 02:22:24 (*)       Instruction decodes
+Info: cpu: # 2017.11.10 02:22:24 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2017.11.10 02:22:24 (*)       Instruction controls
+Info: cpu: # 2017.11.10 02:22:24 (*)     Pipeline frontend
+Info: cpu: # 2017.11.10 02:22:24 (*)     Pipeline backend
+Info: cpu: # 2017.11.10 02:22:27 (*)   Generating RTL from CPU objects
+Info: cpu: # 2017.11.10 02:22:29 (*)   Creating encrypted RTL
+Info: cpu: # 2017.11.10 02:22:30 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'system_cpu1_cpu'
+Info: cpu: "cpu1" instantiated altera_nios2_gen2_unit "cpu"
+Info: cpu0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "cpu0_data_master_translator"
+Info: cpu0_jtag_uart_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "cpu0_jtag_uart_avalon_jtag_slave_translator"
+Info: cpu0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "cpu0_data_master_agent"
+Info: cpu0_jtag_uart_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "cpu0_jtag_uart_avalon_jtag_slave_agent"
+Info: cpu0_jtag_uart_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "cpu0_jtag_uart_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: router_007: "mm_interconnect_0" instantiated altera_merlin_router "router_007"
+Info: router_008: "mm_interconnect_0" instantiated altera_merlin_router "router_008"
+Info: router_009: "mm_interconnect_0" instantiated altera_merlin_router "router_009"
+Info: router_010: "mm_interconnect_0" instantiated altera_merlin_router "router_010"
+Info: router_013: "mm_interconnect_0" instantiated altera_merlin_router "router_013"
+Info: cpu0_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "cpu0_data_master_limiter"
+Info: Reusing file /home/strahinja/data/faks/vezbe/IVS/vezbe/v1/code/dual_mp_shmem/system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_003"
+Info: Reusing file /home/strahinja/data/faks/vezbe/IVS/vezbe/v1/code/dual_mp_shmem/system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_003"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/strahinja/data/faks/vezbe/IVS/vezbe/v1/code/dual_mp_shmem/system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file /home/strahinja/data/faks/vezbe/IVS/vezbe/v1/code/dual_mp_shmem/system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_002"
+Info: Reusing file /home/strahinja/data/faks/vezbe/IVS/vezbe/v1/code/dual_mp_shmem/system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: shared_mem_s1_cmd_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "shared_mem_s1_cmd_width_adapter"
+Info: Reusing file /home/strahinja/data/faks/vezbe/IVS/vezbe/v1/code/dual_mp_shmem/system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_003: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_003"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_003" instantiated error_adapter "error_adapter_0"
+Info: system: Done "system" with 47 modules, 83 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

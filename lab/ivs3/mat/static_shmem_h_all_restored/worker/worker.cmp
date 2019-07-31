@@ -1,0 +1,17 @@
+	component worker is
+		port (
+			clk_clk            : in  std_logic                     := 'X';             -- clk
+			reset_reset_n      : in  std_logic                     := 'X';             -- reset_n
+			wout_waitrequest   : in  std_logic                     := 'X';             -- waitrequest
+			wout_readdata      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			wout_readdatavalid : in  std_logic                     := 'X';             -- readdatavalid
+			wout_burstcount    : out std_logic_vector(0 downto 0);                     -- burstcount
+			wout_writedata     : out std_logic_vector(31 downto 0);                    -- writedata
+			wout_address       : out std_logic_vector(27 downto 0);                    -- address
+			wout_write         : out std_logic;                                        -- write
+			wout_read          : out std_logic;                                        -- read
+			wout_byteenable    : out std_logic_vector(3 downto 0);                     -- byteenable
+			wout_debugaccess   : out std_logic                                         -- debugaccess
+		);
+	end component worker;
+

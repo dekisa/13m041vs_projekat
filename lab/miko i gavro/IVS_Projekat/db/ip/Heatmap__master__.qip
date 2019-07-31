@@ -1,0 +1,3 @@
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) system/system.qip]
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) sdram/sdram.qip]
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) worker/worker.qip]

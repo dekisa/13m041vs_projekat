@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Feb 02 20:38:29 2019
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Heatmap
+Top-level Entity Name : Heatmap_System
+Family : Cyclone IV E
+Total logic elements : 22,288
+    Total combinational functions : 17,828
+    Dedicated logic registers : 12,853
+Total registers : 12853
+Total pins : 41
+Total virtual pins : 0
+Total memory bits : 229,760
+Embedded Multiplier 9-bit elements : 30
+Total PLLs : 1
