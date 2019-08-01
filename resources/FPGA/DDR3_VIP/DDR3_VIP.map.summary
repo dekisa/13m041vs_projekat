@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Thu Aug 01 15:57:21 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : DDR3_VIP
+Top-level Entity Name : DDR3_VIP
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 4457
+Total pins : 145
+Total virtual pins : 0
+Total block memory bits : 233,556
+Total DSP Blocks : 2
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 1
