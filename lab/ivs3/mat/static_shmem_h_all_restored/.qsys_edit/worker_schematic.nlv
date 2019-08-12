@@ -1,0 +1,20 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst worker.cpu -pg 1 -lvl 2 -y 70
+preplace inst worker.cpu.reset_bridge -pg 1
+preplace inst worker -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst worker.cpu_ocm -pg 1 -lvl 3 -y 130
+preplace inst worker.cpu.cpu -pg 1
+preplace inst worker.worker_out -pg 1 -lvl 3 -y 210
+preplace inst worker.jtag_uart -pg 1 -lvl 3 -y 30
+preplace inst worker.cpu.clock_bridge -pg 1
+preplace inst worker.clk_0 -pg 1 -lvl 1 -y 110
+preplace netloc EXPORT<net_container>worker</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)worker.reset) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>worker</net_container>(SLAVE)jtag_uart.avalon_jtag_slave,(MASTER)cpu.data_master,(SLAVE)worker_out.s0,(SLAVE)cpu.debug_mem_slave,(SLAVE)cpu_ocm.s1,(MASTER)cpu.instruction_master) 1 1 2 300 30 660
+preplace netloc FAN_OUT<net_container>worker</net_container>(SLAVE)cpu.clk,(SLAVE)jtag_uart.clk,(SLAVE)worker_out.clk,(MASTER)clk_0.clk,(SLAVE)cpu_ocm.clk1) 1 1 2 280 210 720
+preplace netloc EXPORT<net_container>worker</net_container>(SLAVE)clk_0.clk_in,(SLAVE)worker.clk) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>worker</net_container>(SLAVE)jtag_uart.reset,(SLAVE)worker_out.reset,(SLAVE)cpu.reset,(SLAVE)cpu_ocm.reset1,(MASTER)clk_0.clk_reset) 1 1 2 260 230 700
+preplace netloc EXPORT<net_container>worker</net_container>(MASTER)worker_out.m0,(MASTER)worker.wout) 1 3 1 N
+preplace netloc POINT_TO_POINT<net_container>worker</net_container>(SLAVE)jtag_uart.irq,(MASTER)cpu.irq) 1 2 1 680
+levelinfo -pg 1 0 50 950
+levelinfo -hier worker 60 90 420 750 890

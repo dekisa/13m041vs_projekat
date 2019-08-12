@@ -51,6 +51,17 @@ typedef struct HEAT_SRC
 	int16_t heat;
 } heat_src_t;
 
+typedef struct DESC
+{
+	uint32_t id;
+	uint32_t row_start;
+	uint32_t col_start;
+	uint32_t region_width;
+	uint32_t region_height;
+	uint32_t status;
+	uint32_t reserved[2];	// put on 32 byte boundary 0x20
+} desc_t;
+
 #define MAX_HEAT_SRCS		(5)
 
 #endif /* COMMON_H_ */

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Aug 08 18:50:31 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : ivs_project
+Top-level Entity Name : ivs_project
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 20,218 / 22,320 ( 91 % )
+    Total combinational functions : 17,491 / 22,320 ( 78 % )
+    Dedicated logic registers : 12,720 / 22,320 ( 57 % )
+Total registers : 12789
+Total pins : 41 / 154 ( 27 % )
+Total virtual pins : 0
+Total memory bits : 199,008 / 608,256 ( 33 % )
+Embedded Multiplier 9-bit elements : 30 / 132 ( 23 % )
+Total PLLs : 1 / 4 ( 25 % )

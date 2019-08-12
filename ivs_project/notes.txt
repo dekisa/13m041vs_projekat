@@ -1,0 +1,33 @@
+isprobati:
+- nios
+	- arithmetic instrukcije
+	- velicina ocm, sto manje
+	- velicina kesa, da li utice na performance
+	- instruction cache burst enable
+	- data cache implementation - goal is to save space, does it affect performance?
+	- postoji cpu id
+	
+- worker
+	- pending read instructions
+
+- system
+	- igrati se da svaki worker zasebno meri performanse (mozda moze jedan performance counter, a mozda mora i svaki posebni)
+
+		cpuid	reset vector
+manager		1	0x0200_0000
+worker_0	2	0x0210_0000
+worker_1	4	0x0220_0000
+worker_2	8	0x0230_0000
+worker_3	16	0x0240_0000
+matrix		-	0x0250_0000
+ocm		-	0x0400_1000
+
+PERFORMANCE TEST
+j1
+--Performance Counter Report--
+Total Time: 56.8492 seconds  (5684920611 clock-cycles)
++---------------+-----+-----------+---------------+-----------+
+| Section       |  %  | Time (sec)|  Time (clocks)|Occurrences|
++---------------+-----+-----------+---------------+-----------+
+|processing     | 24.1|   13.70205|     1370205123|          1|
++---------------+-----+-----------+---------------+-----------+

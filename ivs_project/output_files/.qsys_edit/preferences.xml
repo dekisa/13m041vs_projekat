@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="47" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Basic Functions,Library/Processors and Peripherals,Library/Processors and Peripherals/Embedded Processors,Library,Project,Library/Processors and Peripherals/Co-Processors,Library/Basic Functions/Simulation; Debug and Verification,Library/Basic Functions/Simulation; Debug and Verification/Simulation,Library/Processors and Peripherals/Co-Processors/Nios II Custom Instructions" />
+ <window width="1382" height="744" x="-8" y="-8" />
+</preferences>

@@ -1,0 +1,77 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\Dejan\13m041vs_projekat\ivs_project\worker.qsys --synthesis=VERILOG --output-directory=C:\Users\Dejan\13m041vs_projekat\ivs_project\worker\synthesis --family="Cyclone IV E" --part=EP4CE22F17C6
+Progress: Loading ivs_project/worker.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding cpu [altera_nios2_gen2 18.1]
+Progress: Parameterizing module cpu
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding mm_bridge_0 [altera_avalon_mm_bridge 18.1]
+Progress: Parameterizing module mm_bridge_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: worker.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: worker: Generating worker "worker" for QUARTUS_SYNTH
+Info: cpu: "worker" instantiated altera_nios2_gen2 "cpu"
+Info: jtag_uart_0: Starting RTL generation for module 'worker_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=worker_jtag_uart_0 --dir=C:/Users/Dejan/AppData/Local/Temp/alt8115_5112642890943142621.dir/0002_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Dejan/AppData/Local/Temp/alt8115_5112642890943142621.dir/0002_jtag_uart_0_gen//worker_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'worker_jtag_uart_0'
+Info: jtag_uart_0: "worker" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: mm_bridge_0: "worker" instantiated altera_avalon_mm_bridge "mm_bridge_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "worker" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "worker" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "worker" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'worker_cpu_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=worker_cpu_cpu --dir=C:/Users/Dejan/AppData/Local/Temp/alt8115_5112642890943142621.dir/0006_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/Dejan/AppData/Local/Temp/alt8115_5112642890943142621.dir/0006_cpu_gen//worker_cpu_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2019.08.07 14:47:50 (*) Starting Nios II generation
+Info: cpu: # 2019.08.07 14:47:50 (*)   Checking for plaintext license.
+Info: cpu: # 2019.08.07 14:47:52 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2019.08.07 14:47:52 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2019.08.07 14:47:52 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2019.08.07 14:47:52 (*)   Plaintext license not found.
+Info: cpu: # 2019.08.07 14:47:52 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2019.08.07 14:47:54 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2019.08.07 14:47:54 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2019.08.07 14:47:54 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2019.08.07 14:47:54 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: cpu: # 2019.08.07 14:47:54 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2019.08.07 14:47:54 (*)   Creating all objects for CPU
+Info: cpu: # 2019.08.07 14:47:54 (*)     Testbench
+Info: cpu: # 2019.08.07 14:47:54 (*)     Instruction decoding
+Info: cpu: # 2019.08.07 14:47:54 (*)       Instruction fields
+Info: cpu: # 2019.08.07 14:47:55 (*)       Instruction decodes
+Info: cpu: # 2019.08.07 14:47:56 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2019.08.07 14:47:56 (*)       Instruction controls
+Info: cpu: # 2019.08.07 14:47:56 (*)     Pipeline frontend
+Info: cpu: # 2019.08.07 14:47:56 (*)     Pipeline backend
+Info: cpu: # 2019.08.07 14:48:02 (*)   Generating RTL from CPU objects
+Info: cpu: # 2019.08.07 14:48:05 (*)   Creating encrypted RTL
+Info: cpu: # 2019.08.07 14:48:07 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'worker_cpu_cpu'
+Info: cpu: "cpu" instantiated altera_nios2_gen2_unit "cpu"
+Info: cpu_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "cpu_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: cpu_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "cpu_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: cpu_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "cpu_data_master_limiter"
+Info: Reusing file C:/Users/Dejan/13m041vs_projekat/ivs_project/worker/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/Users/Dejan/13m041vs_projekat/ivs_project/worker/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: worker: Done "worker" with 22 modules, 41 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

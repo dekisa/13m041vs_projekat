@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Aug 08 18:45:38 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : ivs_project
+Top-level Entity Name : ivs_project
+Family : Cyclone IV E
+Total logic elements : 22,206
+    Total combinational functions : 17,443
+    Dedicated logic registers : 13,125
+Total registers : 13125
+Total pins : 41
+Total virtual pins : 0
+Total memory bits : 199,008
+Embedded Multiplier 9-bit elements : 30
+Total PLLs : 1

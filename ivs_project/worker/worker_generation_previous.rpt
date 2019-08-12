@@ -1,0 +1,74 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\Dejan\13m041vs_projekat\ivs_project\system.qsys --synthesis=VERILOG --output-directory=C:\Users\Dejan\13m041vs_projekat\ivs_project\worker\synthesis --family="Cyclone IV E" --part=EP4CE22F17C6
+Progress: Loading ivs_project/system.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 18.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding manager [altera_nios2_gen2 18.1]
+Progress: Parameterizing module manager
+Progress: Adding manager_jtag_uart [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module manager_jtag_uart
+Progress: Adding performance_counter_0 [altera_avalon_performance_counter 18.1]
+Progress: Parameterizing module performance_counter_0
+Progress: Adding sdram [altera_avalon_new_sdram_controller 18.1]
+Progress: Parameterizing module sdram
+Progress: Adding shared_ocm [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module shared_ocm
+Progress: Adding worker_0 [worker 1.0]
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding cpu [altera_nios2_gen2 18.1]
+Progress: Parameterizing module cpu
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding mm_bridge_0 [altera_avalon_mm_bridge 18.1]
+Progress: Parameterizing module mm_bridge_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Progress: Parameterizing module worker_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: system.manager_jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: system.sdram: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Error: system.worker_0.cpu: Reset slave mm_bridge_0.s0 not connected to instruction_master.
+Error: system.worker_0.cpu: Exception slave mm_bridge_0.s0 not connected to instruction_master.
+Info: system.worker_0.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Warning: system.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Warning: system.shared_ocm: shared_ocm.s2 must be connected to an Avalon-MM master
+Info: system: Generating system "system" for QUARTUS_SYNTH
+Info: altpll_0: "system" instantiated altpll "altpll_0"
+Info: manager: "system" instantiated altera_nios2_gen2 "manager"
+Info: manager_jtag_uart: Starting RTL generation for module 'system_manager_jtag_uart'
+Info: manager_jtag_uart:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=system_manager_jtag_uart --dir=C:/Users/Dejan/AppData/Local/Temp/alt8115_4493414477704874338.dir/0006_manager_jtag_uart_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Dejan/AppData/Local/Temp/alt8115_4493414477704874338.dir/0006_manager_jtag_uart_gen//system_manager_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: manager_jtag_uart: Done RTL generation for module 'system_manager_jtag_uart'
+Info: manager_jtag_uart: "system" instantiated altera_avalon_jtag_uart "manager_jtag_uart"
+Info: performance_counter_0: Starting RTL generation for module 'system_performance_counter_0'
+Info: performance_counter_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_performance_counter -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_performance_counter/generate_rtl.pl --name=system_performance_counter_0 --dir=C:/Users/Dejan/AppData/Local/Temp/alt8115_4493414477704874338.dir/0007_performance_counter_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Dejan/AppData/Local/Temp/alt8115_4493414477704874338.dir/0007_performance_counter_0_gen//system_performance_counter_0_component_configuration.pl  --do_build_sim=0  ]
+Info: performance_counter_0: Done RTL generation for module 'system_performance_counter_0'
+Info: performance_counter_0: "system" instantiated altera_avalon_performance_counter "performance_counter_0"
+Info: sdram: Starting RTL generation for module 'system_sdram'
+Info: sdram:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=system_sdram --dir=C:/Users/Dejan/AppData/Local/Temp/alt8115_4493414477704874338.dir/0008_sdram_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Dejan/AppData/Local/Temp/alt8115_4493414477704874338.dir/0008_sdram_gen//system_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram: Done RTL generation for module 'system_sdram'
+Info: sdram: "system" instantiated altera_avalon_new_sdram_controller "sdram"
+Info: shared_ocm: Starting RTL generation for module 'system_shared_ocm'
+Info: shared_ocm:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_shared_ocm --dir=C:/Users/Dejan/AppData/Local/Temp/alt8115_4493414477704874338.dir/0009_shared_ocm_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Dejan/AppData/Local/Temp/alt8115_4493414477704874338.dir/0009_shared_ocm_gen//system_shared_ocm_component_configuration.pl  --do_build_sim=0  ]
+Info: shared_ocm: Done RTL generation for module 'system_shared_ocm'
+Info: shared_ocm: "system" instantiated altera_avalon_onchip_memory2 "shared_ocm"
+Info: worker_0: "system" instantiated worker "worker_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Error: Generation stopped, 67 or more modules remaining
+Info: system: Done "system" with 42 modules, 10 files
+Error: qsys-generate failed with exit code 1: 3 Errors, 2 Warnings
+Info: Stopping: Create HDL design files for synthesis
