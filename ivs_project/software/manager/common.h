@@ -44,12 +44,16 @@
 #define MAT_BUF1_ADDR		(MAT_BUFFER_BASE + MAT_BUF1_OFFSET)
 #define MAT_BUF2_ADDR		(MAT_BUFFER_BASE + MAT_BUF2_OFFSET)
 
+#define	DESC_READY			11
+#define	DESC_DONE			22
+
 typedef struct HEAT_SRC
 {
 	uint16_t xpos;
 	uint16_t ypos;
 	int16_t heat;
 } heat_src_t;
+
 
 typedef struct DESC
 {
@@ -63,11 +67,6 @@ typedef struct DESC
 	int16_t * next;
 } desc_t;
 
-typedef enum DESC_STATUS_ENUM
-{
-	DESC_READY,
-	DESC_DONE
-} desc_status_t;
 #define MAX_HEAT_SRCS		(5)
 
 #endif /* COMMON_H_ */

@@ -1,5 +1,5 @@
 Flow report for ivs_project
-Thu Aug 08 18:51:24 2019
+Thu Sep 19 14:12:48 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Aug 08 18:50:54 2019       ;
+; Flow Status                        ; Successful - Thu Sep 19 14:12:38 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ivs_project                                 ;
 ; Top-level Entity Name              ; ivs_project                                 ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/08/2019 18:38:31 ;
+; Start date & time ; 09/19/2019 14:08:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ivs_project         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                    ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 96897438446992.156528230807584                           ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 247207016804418.156889491603104                          ; --            ; --          ; --         ;
 ; MISC_FILE                           ; system/synthesis/../system.cmp                           ; --            ; --          ; --         ;
 ; MISC_FILE                           ; system/synthesis/../../system.qsys                       ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family)                   ; --            ; --          ; Top        ;
@@ -95,11 +95,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:06:39     ; 1.0                     ; 5328 MB             ; 00:07:30                           ;
-; Fitter               ; 00:04:49     ; 1.0                     ; 5616 MB             ; 00:06:37                           ;
-; Assembler            ; 00:00:09     ; 1.0                     ; 4783 MB             ; 00:00:08                           ;
-; Timing Analyzer      ; 00:00:28     ; 1.2                     ; 4988 MB             ; 00:00:30                           ;
-; Total                ; 00:12:05     ; --                      ; --                  ; 00:14:45                           ;
+; Analysis & Synthesis ; 00:02:15     ; 1.0                     ; 5357 MB             ; 00:02:29                           ;
+; Fitter               ; 00:01:25     ; 1.1                     ; 6092 MB             ; 00:02:37                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4771 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:09     ; 1.4                     ; 5029 MB             ; 00:00:10                           ;
+; Total                ; 00:03:53     ; --                      ; --                  ; 00:05:19                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -108,10 +108,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-5K26V4T  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-5K26V4T  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-5K26V4T  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-5K26V4T  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-T899SJD  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-T899SJD  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-T899SJD  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-T899SJD  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

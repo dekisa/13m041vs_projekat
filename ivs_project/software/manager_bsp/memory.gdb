@@ -3,7 +3,7 @@
 # Machine generated for CPU 'manager' in SOPC Builder design 'system'
 # SOPC Builder design path: ../../system.sopcinfo
 #
-# Generated: Thu Aug 08 17:31:06 CEST 2019
+# Generated: Thu Sep 19 14:21:40 CEST 2019
 
 # DO NOT MODIFY THIS FILE
 #

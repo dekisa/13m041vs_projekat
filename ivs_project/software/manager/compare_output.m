@@ -1,13 +1,18 @@
 % NOTE: Using only 100 iterations
-
-%sources_filename = 'sources_functional.bin';
-%heat_frac_bits = 14;
-%input_filename = 'out_functional.bin';
-%output_filename = 'out_functional_heat.bin';
-sources_filename = 'sources_performance.bin';
+% sources_performance.bin
+% functional test times
+% j1    14.85535
+% j2    8.39713
+% j3    6.38468
+% j4    5.24618
+sources_filename = 'sources_functional.bin';
 heat_frac_bits = 14;
-input_filename = 'out_performance.bin';
-output_filename = 'out_performance_heat.bin';
+input_filename1 = 'out_functional_j1.bin';
+input_filename2 = 'out_functional_j2.bin';
+input_filename3 = 'out_functional_j3.bin';
+input_filename4 = 'out_functional_j4.bin';
+output_filename = 'out_functional_heat.bin';
+
 
 % Read sources
 fp = fopen(sources_filename, 'rb');
@@ -23,10 +28,34 @@ end
 fclose(fp);
 
 % Read input image
-fp = fopen(input_filename, 'rb');
+fp = fopen(input_filename1, 'rb');
 width = fread(fp, 1, 'uint32');
 height = fread(fp, 1, 'uint32');
-output_image = reshape(fread(fp, width*height, 'int16')/2^heat_frac_bits, [width height]);
+output_image1 = reshape(fread(fp, width*height, 'int16')/2^heat_frac_bits, [width height]);
+fclose(fp);
+
+
+% Read input image
+fp = fopen(input_filename2, 'rb');
+width = fread(fp, 1, 'uint32');
+height = fread(fp, 1, 'uint32');
+output_image2 = reshape(fread(fp, width*height, 'int16')/2^heat_frac_bits, [width height]);
+fclose(fp);
+
+
+% Read input image
+fp = fopen(input_filename3, 'rb');
+width = fread(fp, 1, 'uint32');
+height = fread(fp, 1, 'uint32');
+output_image3 = reshape(fread(fp, width*height, 'int16')/2^heat_frac_bits, [width height]);
+fclose(fp);
+
+
+% Read input image
+fp = fopen(input_filename4, 'rb');
+width = fread(fp, 1, 'uint32');
+height = fread(fp, 1, 'uint32');
+output_image4 = reshape(fread(fp, width*height, 'int16')/2^heat_frac_bits, [width height]);
 fclose(fp);
 
 % Process data
@@ -61,9 +90,21 @@ for it = 1:100
 end
 
 % Compare output and reference image
-diff_image = data(2:width+1,2:height+1) - output_image;
+diff_image1 = data(2:width+1,2:height+1) - output_image1;
+diff_image2 = data(2:width+1,2:height+1) - output_image2;
+diff_image3 = data(2:width+1,2:height+1) - output_image3;
+diff_image4 = data(2:width+1,2:height+1) - output_image4;
 figure; imshow(data); title('Reference output image');
-figure; imshow(output_image); title('Nios2 output image');
-figure; imagesc(diff_image); title('Difference image');
+figure; imshow(output_image1); title('Nios2 output image1');
+figure; imshow(output_image2); title('Nios2 output image2');
+figure; imshow(output_image3); title('Nios2 output image3');
+figure; imshow(output_image4); title('Nios2 output image4');
+figure; imagesc(diff_image1); title('Difference image1');
+figure; imagesc(diff_image2); title('Difference image2');
+figure; imagesc(diff_image3); title('Difference image3');
+figure; imagesc(diff_image4); title('Difference image4');
 
-disp(['Maximal abs error: ', num2str(max(abs(diff_image(:))))])
+disp(['Maximal abs error: ', num2str(max(abs(diff_image1(:))))])
+disp(['Maximal abs error: ', num2str(max(abs(diff_image2(:))))])
+disp(['Maximal abs error: ', num2str(max(abs(diff_image3(:))))])
+disp(['Maximal abs error: ', num2str(max(abs(diff_image4(:))))])

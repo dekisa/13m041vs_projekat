@@ -10,7 +10,7 @@
 #include "altera_avalon_performance_counter.h"
 #endif
 
-#define NR_OF_WORKERS		(2)
+#define NR_OF_WORKERS		(4)
 
 #if (NR_OF_WORKERS==1)
 #define TASK_DONE_MASK		(0x01)
@@ -142,8 +142,7 @@ int main()
 
 		curr = matrix1;
 		next = matrix2;
-		*width -= 2;
-		*height -= 2;
+
 		for (int i = 0; i < 4; i++)
 		{
 			descriptors[i].status = DESC_DONE;
@@ -157,91 +156,96 @@ int main()
 		descriptors[0].status = DESC_READY;
 		descriptors[0].curr	= curr;
 		descriptors[0].next	= next;
+		printf("done with desctriptors for 1...");
 
 #elif (NR_OF_WORKERS==2)
 		descriptors[0].id = 0;
-		descriptors[0].col_start = 0;
-		descriptors[0].row_start = 0;
+		descriptors[0].col_start = 1;
+		descriptors[0].row_start = 1;
 		descriptors[0].region_width = *width;
-		descriptors[0].region_height = *height/2;
+		descriptors[0].region_height = *height/2+1;
 		descriptors[0].status = DESC_READY;
 		descriptors[0].curr	= curr;
 		descriptors[0].next	= next;
 
 		descriptors[1].id = 0;
-		descriptors[1].col_start = 0;
-		descriptors[1].row_start = *height/2;
+		descriptors[1].col_start = *height/2;
+		descriptors[1].row_start = 1;
 		descriptors[1].region_width = *width;
-		descriptors[1].region_height = *height/2;
+		descriptors[1].region_height = *height/2+1;
 		descriptors[1].status = DESC_READY;
 		descriptors[1].curr	= curr;
 		descriptors[1].next	= next;
+		printf("done with desctriptors for 2...");
+		if (descriptors[1].status == DESC_READY)
+					printf("descriptors for worker 1 ready...");
+		if (descriptors[0].status == DESC_READY)
+							printf("descriptors for worker 0 ready...");
 
 #elif (NR_OF_WORKERS==3)
 		descriptors[0].id = 0;
-		descriptors[0].col_start = 0;
-		descriptors[0].row_start = 0;
+		descriptors[0].col_start = 1;
+		descriptors[0].row_start = 1;
 		descriptors[0].region_width = *width;
-		descriptors[0].region_height = *height/3;
+		descriptors[0].region_height = *height/3+1;
 		descriptors[0].status = DESC_READY;
 		descriptors[0].curr	= curr;
-		descriptors[0].next	= next;
+		descriptors[0].next	= next;//obradjuje 42 (1-42)
 
 		descriptors[1].id = 0;
-		descriptors[1].col_start = 0;
-		descriptors[1].row_start = *height/3;
+		descriptors[1].col_start = *height/3;
+		descriptors[1].row_start = 1;
 		descriptors[1].region_width = *width;
-		descriptors[1].region_height = *height/3;
+		descriptors[1].region_height = *height/3+1+1;//obradjuje 43(43-85)
 		descriptors[1].status = DESC_READY;
 		descriptors[1].curr	= curr;
 		descriptors[1].next	= next;
 
 		descriptors[2].id = 0;
-		descriptors[2].col_start = 0;
-		descriptors[2].row_start = 2 * *height/3;
+		descriptors[2].col_start =  (2 * *height)/3;//obradjuje 21
+		descriptors[2].row_start =1;
 		descriptors[2].region_width = *width;
-		descriptors[2].region_height = *height/3+1;
+		descriptors[2].region_height = *height/3+1+1;
 		descriptors[2].status = DESC_READY;
 		descriptors[2].curr	= curr;
 		descriptors[2].next	= next;
-
+		printf("done with desctriptors for 3...");
 #elif (NR_OF_WORKERS==4)
 		descriptors[0].id = 0;
-		descriptors[0].col_start = 0;
-		descriptors[0].row_start = 0;
+		descriptors[0].col_start = 1;
+		descriptors[0].row_start = 1;
 		descriptors[0].region_width = *width;
-		descriptors[0].region_height = *height/4;
+		descriptors[0].region_height = *height/4+2;
 		descriptors[0].status = DESC_READY;
 		descriptors[0].curr	= curr;
 		descriptors[0].next	= next;
 
 		descriptors[1].id = 0;
-		descriptors[1].col_start = 0;
-		descriptors[1].row_start = *height/4;
+		descriptors[1].col_start = *height/4+1;
+		descriptors[1].row_start = 1;
 		descriptors[1].region_width = *width;
-		descriptors[1].region_height = *height/4;
+		descriptors[1].region_height = *height/4+2;
 		descriptors[1].status = DESC_READY;
 		descriptors[1].curr	= curr;
 		descriptors[1].next	= next;
 
 		descriptors[2].id = 0;
-		descriptors[2].col_start = 0;
-		descriptors[2].row_start = 2 * *height/4;
+		descriptors[2].col_start = (2 * *height)/4;
+		descriptors[2].row_start =1 ;
 		descriptors[2].region_width = *width;
-		descriptors[2].region_height = *height/4;
+		descriptors[2].region_height = *height/4+2;
 		descriptors[2].status = DESC_READY;
 		descriptors[2].curr	= curr;
 		descriptors[2].next	= next;
 
 		descriptors[3].id = 0;
-		descriptors[3].col_start = 0;
-		descriptors[3].row_start = 3 * *height/4;
+		descriptors[3].col_start = (3 * *height)/4;
+		descriptors[3].row_start = 1;
 		descriptors[3].region_width = *width;
-		descriptors[3].region_height = *height/4;
+		descriptors[3].region_height = *height/4+2;
 		descriptors[3].status = DESC_READY;
 		descriptors[3].curr	= curr;
 		descriptors[3].next	= next;
-
 #endif
 		altera_avalon_mutex_unlock(mux);
 

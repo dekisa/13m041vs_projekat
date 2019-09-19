@@ -163,13 +163,14 @@ int main()
 
 	while (1)
 	{
+
 		while (region->status != DESC_READY)
 		{
 			usleep(1000);
 		}
-		for (int y = region->col_start; y < region->col_start + region->region_height; y++)
+		for (int y = region->col_start; y < region->col_start + region->region_height-2; y++)
 		{
-			for (int x = region->row_start; x < region->row_start + region->region_width; x++)
+			for (int x = region->row_start; x < region->row_start + region->region_width-2; x++)
 			{
 				// don't update heat for sources
 				uint8_t is_source = 0;
@@ -192,6 +193,7 @@ int main()
 					region->next[id] += _fp_mult(*c_y, (region->curr[id+*width] + region->curr[id-*width] - (region->curr[id]<<1)));
 				}
 			}
+
 		}
 		while (altera_avalon_mutex_trylock(mux,1))
 		{
